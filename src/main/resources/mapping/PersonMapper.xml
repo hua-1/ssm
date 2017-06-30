@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ssm.dao.PersonMapper">
+    <!-- 支持缓存配置 -->
+    <cache type="ssm.util.RedisCache" />
+
+
+
+    <select id="getAllPerson" resultType="ssm.model.Person">
+         SELECT longname FROM tbl_user limit 10
+    </select>
+
+</mapper>
